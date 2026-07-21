@@ -1,0 +1,117 @@
+media:
+  input: media
+  output: /media
+  rename: safe
+  categories: [image]
+
+content:
+  - name: site
+    label: Управление сайтом
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: site_name
+        label: Название студии
+        type: string
+        required: true
+      - name: location_short
+        label: Подпись под названием
+        type: string
+      - name: hero_kicker
+        label: Маленькая надпись на главном экране
+        type: string
+      - name: hero_title_before
+        label: Заголовок — первая часть
+        type: string
+      - name: hero_title_accent
+        label: Заголовок — выделенное слово
+        type: string
+      - name: hero_title_after
+        label: Заголовок — последняя часть
+        type: string
+      - name: hero_text
+        label: Описание на главном экране
+        type: text
+      - name: rating
+        label: Рейтинг
+        type: string
+      - name: review_count
+        label: Количество отзывов
+        type: number
+      - name: hours
+        label: График
+        type: string
+      - name: address_short
+        label: Короткий адрес
+        type: string
+      - name: address_full
+        label: Полный адрес
+        type: string
+      - name: phone_display
+        label: Телефон как показывать на сайте
+        type: string
+      - name: phone_raw
+        label: Телефон для кнопки звонка
+        type: string
+        description: Например +77072921004
+      - name: whatsapp_raw
+        label: Номер WhatsApp
+        type: string
+        description: Только цифры, например 77072921004
+      - name: instagram_url
+        label: Ссылка Instagram
+        type: string
+
+      - name: services
+        label: Услуги
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Название
+            type: string
+            required: true
+          - name: description
+            label: Описание
+            type: text
+          - name: note
+            label: Короткая подпись
+            type: string
+
+      - name: gallery
+        label: Фотографии работ
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
+        fields:
+          - name: image
+            label: Фото
+            type: image
+            required: true
+          - name: caption
+            label: Подпись
+            type: string
+
+      - name: reviews
+        label: Отзывы
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Имя
+            type: string
+          - name: text
+            label: Текст отзыва
+            type: text
+          - name: meta
+            label: Дата / подпись
+            type: string
