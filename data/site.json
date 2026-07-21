@@ -14,8 +14,6 @@
   "phone_display": "+7 707 292 10 04",
   "phone_raw": "+77072921004",
   "whatsapp_raw": "77072921004",
-  "instagram_url": "",
-
   "services": [
     {
       "title": "Маникюр",
@@ -33,7 +31,6 @@
       "note": "Индивидуально и красиво"
     }
   ],
-
   "gallery": [
     {
       "image": "/media/work-1.jpg",
@@ -46,9 +43,12 @@
     {
       "image": "/media/work-3.jpg",
       "caption": "Нежный классический френч"
+    },
+    {
+      "image": "/media/img20260720223858338.jpg",
+      "caption": "что"
     }
   ],
-
   "reviews": [
     {
       "name": "Gulia Jum",
